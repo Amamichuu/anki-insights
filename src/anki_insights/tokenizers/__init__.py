@@ -1,12 +1,13 @@
 from __future__ import annotations
 
 import re
-from typing import Protocol, Set
+from typing import Any, Optional, Protocol, cast
 
 import jieba
 import spacy
 from spacy.language import Language
 from spacy.tokens import Token
+from underthesea import word_tokenize
 
 try:
     from opencc import OpenCC
@@ -21,21 +22,28 @@ except ImportError:  # pragma: no cover
 
 
 class Tokenizer(Protocol):
-    def tokenize(self, text: str) -> Set[str]: ...
+    def tokenize(self, text: str) -> set[str]: ...
 
 
 def build_tokenizer(language: str) -> Tokenizer:
-    """Create a tokenizer for a supported language without any silent fallback."""
-    normalized = language.lower().strip()
+    """Create a tokenizer for a supported language without silent fallback."""
+    normalized: str = language.lower().strip()
 
     if normalized in {"zh", "cn", "chinese", "mandarin"}:
         return MandarinTokenizer()
+
+    if normalized in {"vi", "vietnamese"}:
+        return VietnameseTokenizer()
+
     if normalized in {"id", "indonesian"}:
         return IndonesianTokenizer()
+
     if normalized in {"fr", "french"}:
         return SpacyTokenizer("fr_core_news_sm")
+
     if normalized in {"es", "spanish"}:
         return SpacyTokenizer("es_core_news_sm")
+
     if normalized in {"en", "english"}:
         return SpacyTokenizer("en_core_web_sm")
     if normalized in {"ja", "jp", "japanese"}:
@@ -44,7 +52,7 @@ def build_tokenizer(language: str) -> Tokenizer:
     raise ValueError(f"Unsupported language: {language}")
 
 
-_MODEL_LANGUAGE_MAP = {
+_MODEL_LANGUAGE_MAP: dict[str, str] = {
     "en_core_web_sm": "en",
     "fr_core_news_sm": "fr",
     "es_core_news_sm": "es",
@@ -55,26 +63,38 @@ class SpacyTokenizer:
     def __init__(self, model_name: str) -> None:
         try:
             self._nlp: Language = spacy.load(model_name)
+
         except OSError:
-            language_code = _MODEL_LANGUAGE_MAP.get(model_name)
+            language_code: Optional[str] = _MODEL_LANGUAGE_MAP.get(model_name)
+
             if language_code is None:
                 raise
+
             self._nlp = spacy.blank(language_code)
 
     def _normalize(self, token: Token) -> str:
         if token.is_space or token.is_punct or token.like_num:
             return ""
 
-        raw = token.lemma_ or token.text
-        normalized = raw.lower().strip()
-        return re.sub(r"^[^\w]+|[^\w]+$", "", normalized)
+        raw: str = token.lemma_ or token.text
+        normalized: str = raw.lower().strip()
 
-    def tokenize(self, text: str) -> Set[str]:
-        return {
-            normalized
-            for token in self._nlp(text or "")
-            if (normalized := self._normalize(token))
-        }
+        return re.sub(
+            r"^[^\w]+|[^\w]+$",
+            "",
+            normalized,
+        )
+
+    def tokenize(self, text: str) -> set[str]:
+        tokens: set[str] = set()
+
+        for token in self._nlp(text or ""):
+            normalized: str = self._normalize(token)
+
+            if normalized:
+                tokens.add(normalized)
+
+        return tokens
 
 
 class IndonesianTokenizer:
@@ -85,19 +105,28 @@ class IndonesianTokenizer:
         if token.is_space or token.is_punct or token.like_num:
             return ""
 
-        normalized = token.text.lower().strip()
-        return re.sub(r"^[^\w]+|[^\w]+$", "", normalized)
+        normalized: str = token.text.lower().strip()
 
-    def tokenize(self, text: str) -> Set[str]:
-        return {
-            normalized
-            for token in self._nlp(text or "")
-            if (normalized := self._normalize(token))
-        }
+        return re.sub(
+            r"^[^\w]+|[^\w]+$",
+            "",
+            normalized,
+        )
+
+    def tokenize(self, text: str) -> set[str]:
+        tokens: set[str] = set()
+
+        for token in self._nlp(text or ""):
+            normalized: str = self._normalize(token)
+
+            if normalized:
+                tokens.add(normalized)
+
+        return tokens
 
 
 class MandarinTokenizer:
-    _chinese_re = re.compile(r"[\u4e00-\u9fff]")
+    _chinese_re: re.Pattern[str] = re.compile(r"[\u4e00-\u9fff]")
 
     def __init__(
         self,
@@ -105,21 +134,37 @@ class MandarinTokenizer:
         opencc_config: str = "t2s",
         char_fallback: bool = True,
     ) -> None:
-        self._char_fallback = char_fallback
-        self._converter = OpenCC(opencc_config) if use_opencc and OpenCC else None
+        self._char_fallback: bool = char_fallback
+
+        self._converter: Optional[Any] = (
+            OpenCC(opencc_config) if use_opencc and OpenCC else None
+        )
 
     def _normalize_script(self, text: str) -> str:
-        return self._converter.convert(text) if self._converter else text
+        if self._converter is not None:
+            return str(self._converter.convert(text))
+
+        return text
 
     def _contains_chinese(self, text: str) -> bool:
         return bool(self._chinese_re.search(text))
 
-    def tokenize(self, text: str) -> Set[str]:
-        normalized = self._normalize_script(text or "")
-        tokens: Set[str] = set()
+    def tokenize(self, text: str) -> set[str]:
+        normalized: str = self._normalize_script(text or "")
 
-        for word in jieba.lcut(normalized, cut_all=False):
-            token = word.strip()
+        tokens: set[str] = set()
+
+        words: list[str] = [
+            str(word)
+            for word in jieba.lcut(
+                normalized,
+                cut_all=False,
+            )
+        ]
+
+        for word in words:
+            token: str = word.strip()
+
             if not token:
                 continue
 
@@ -182,3 +227,39 @@ class JapaneseTokenizer:
             )
             if (normalized := self._normalize(morpheme))
         }
+
+
+class VietnameseTokenizer:
+    def _normalize(self, token: str) -> str:
+        normalized: str = token.lower().strip()
+
+        if not normalized:
+            return ""
+
+        if normalized.isnumeric():
+            return ""
+
+        return re.sub(
+            r"^[^\w]+|[^\w]+$",
+            "",
+            normalized,
+        )
+
+    def tokenize(self, text: str) -> set[str]:
+        segmented: str = cast(
+            str,
+            word_tokenize(
+                text or "",
+                format="text",
+            ),
+        )
+
+        tokens: set[str] = set()
+
+        for token in segmented.split():
+            normalized: str = self._normalize(token)
+
+            if normalized:
+                tokens.add(normalized)
+
+        return tokens

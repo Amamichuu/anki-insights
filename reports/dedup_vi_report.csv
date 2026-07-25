@@ -1,0 +1,8 @@
+order,note_id,status,text,tokens,new_tokens
+1,1785001153909,KEEP,Tôi là người Mỹ!,là | mỹ | người | tôi,là | mỹ | người | tôi
+2,1785001295850,KEEP,Tôi là người Việt Nam,là | người | tôi | việt_nam,việt_nam
+3,1785001783613,KEEP,"Vâng, tôi là Vy",là | tôi | vy | vâng,vy | vâng
+4,1785001817450,KEEP,Xin lỗi,xin_lỗi,xin_lỗi
+5,1785001976858,KEEP,"Vâng, tôi là người Úc",là | người | tôi | vâng | úc,úc
+6,1785002046602,KEEP,"Chào, tôi là người Úc",chào | là | người | tôi | úc,chào
+7,1785002160868,KEEP,Minh là người Việt Nam,là | minh | người | việt_nam,minh

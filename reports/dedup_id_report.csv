@@ -39,3 +39,91 @@ order,note_id,status,text,tokens,new_tokens
 38,1784131741396,KEEP,Aplikasi ini menghubungkan pengguna dengan dokter,aplikasi | dengan | dokter | ini | menghubungkan | pengguna,aplikasi | dengan | menghubungkan | pengguna
 39,1784131947471,KEEP,Akun ini diblokir,akun | diblokir | ini,akun | diblokir
 40,1784132036785,KEEP,Pembayaran sudah diterima,diterima | pembayaran | sudah,diterima | pembayaran | sudah
+41,1784215236816,KEEP,Aku selalu minum kopi sebelum mulai kerja,aku | kerja | kopi | minum | mulai | sebelum | selalu,sebelum | selalu
+42,1784215346164,KEEP,Aku biasanya jalan-jalan sebentar sesudah makan malam,aku | biasanya | jalan-jalan | makan | malam | sebentar | sesudah,biasanya | jalan-jalan | malam | sebentar | sesudah
+43,1784215940550,KEEP,"Setelah selesai kerja, aku langsung pulang",aku | kerja | langsung | pulang | selesai | setelah,langsung | pulang | selesai | setelah
+44,1784216400656,KEEP,Seluruh keluarga kami berkumpul saat Lebaran,berkumpul | kami | keluarga | lebaran | saat | seluruh,berkumpul | keluarga | lebaran | saat | seluruh
+45,1784216453454,KEEP,"Tentu saja, aku bisa bantu",aku | bantu | bisa | saja | tentu,bantu | bisa | saja | tentu
+46,1784217182117,KEEP,"Kalau dia bilang akan datang, pasti dia datang",akan | bilang | datang | dia | kalau | pasti,akan | bilang | pasti
+47,1784217312996,KEEP,"Maaf, kursi ini masih kosong?",ini | kosong | kursi | maaf | masih,kosong | kursi | maaf
+48,1784217398637,KEEP,Tolong kosongkan tasmu sebelum diperiksa,diperiksa | kosongkan | sebelum | tasmu | tolong,diperiksa | kosongkan | tasmu | tolong
+49,1784217501945,KEEP,Jangan buang sampah sembarangan,buang | jangan | sampah | sembarangan,buang | jangan | sampah | sembarangan
+50,1784217616863,KEEP,Buang saja ke tong sampah di depan,buang | depan | di | ke | saja | sampah | tong,depan | ke | tong
+51,1784217800808,KEEP,"Kita ketemu hari Rabu, ya?",hari | ketemu | kita | rabu | ya,hari | ketemu | rabu | ya
+52,1784217869170,KEEP,Aku sering pakai aplikasi ini buat belajar bahasa Indonesia,aku | aplikasi | bahasa | belajar | buat | indonesia | ini | pakai | sering,pakai | sering
+53,1784217928519,KEEP,Aku mulai kerja hari Senin,aku | hari | kerja | mulai | senin,senin
+54,1784217997215,KEEP,Rapatnya dijadwalkan hari Selasa,dijadwalkan | hari | rapatnya | selasa,dijadwalkan | rapatnya | selasa
+55,1784218047754,KEEP,Aku ada janji sama dokter hari Kamis,ada | aku | dokter | hari | janji | kamis | sama,ada | janji | kamis
+56,1784218108125,KEEP,Aku nggak sabar nunggu hari Jumat,aku | hari | jumat | nggak | nunggu | sabar,jumat | nunggu | sabar
+57,1784218132244,KEEP,"Kita jalan-jalan hari Sabtu, yuk!",hari | jalan-jalan | kita | sabtu | yuk,sabtu
+58,1784218155553,KEEP,Hari Minggu biasanya aku santai di rumah,aku | biasanya | di | hari | minggu | rumah | santai,minggu | rumah | santai
+59,1784218216420,KEEP,Aku pergi ke kafe dengan teman-temanku,aku | dengan | kafe | ke | pergi | teman-temanku,kafe | teman-temanku
+60,1784218238095,KEEP,Akhir pekan ini aku mau jalan-jalan bersama keluarga,akhir | aku | bersama | ini | jalan-jalan | keluarga | mau | pekan,akhir | bersama | pekan
+61,1784309628368,KEEP,Aku makan sup pakai sendok,aku | makan | pakai | sendok | sup,sendok | sup
+62,1784309671537,KEEP,Anginnya masuk lewat jendela,anginnya | jendela | lewat | masuk,anginnya | jendela | lewat | masuk
+63,1784309957548,KEEP,Aku belum cuci piring,aku | belum | cuci | piring,belum | cuci | piring
+64,1784310005374,KEEP,Aku habis makan,aku | habis | makan,habis
+65,1784310038554,KEEP,Habis itu kami tidur,habis | itu | kami | tidur,tidur
+66,1784310083112,KEEP,Aku lagi nggak punya uang,aku | lagi | nggak | punya | uang,punya | uang
+67,1784310138710,KEEP,Anaknya cerdas banget,anaknya | banget | cerdas,anaknya | banget | cerdas
+68,1784310196476,KEEP,File-nya ada di folder Unduhan,ada | di | file | folder | nya | unduhan,file | folder | nya | unduhan
+69,1784310282971,KEEP,Temukan jawaban yang paling tepat,jawaban | paling | temukan | tepat | yang,jawaban | paling | temukan | tepat
+70,1784310496494,KEEP,Jangan bagikan informasi pribadi ke orang lain,bagikan | informasi | jangan | ke | lain | orang | pribadi,bagikan | informasi | lain | pribadi
+71,1784310614365,KEEP,Buka pengaturan aplikasi ini,aplikasi | buka | ini | pengaturan,buka | pengaturan
+72,1784310669486,KEEP,"Sampai pada tahap ini, semuanya berjalan lancar",berjalan | ini | lancar | pada | sampai | semuanya | tahap,berjalan | lancar | pada | sampai | semuanya | tahap
+73,1784310683646,KEEP,Sekarang kita masuk ke tahap berikutnya,berikutnya | ke | kita | masuk | sekarang | tahap,berikutnya | sekarang
+74,1784310729151,KEEP,"Saat aku sampai di rumah, hujan mulai turun",aku | di | hujan | mulai | rumah | saat | sampai | turun,hujan | turun
+75,1784310760632,KEEP,"Bisa buka pintunya, nggak?",bisa | buka | nggak | pintunya,pintunya
+76,1784310786929,KEEP,Jangan lupa simpan dulu perubahanmu,dulu | jangan | lupa | perubahanmu | simpan,lupa | perubahanmu | simpan
+77,1784310807110,KEEP,Ada banyak pilihan di menu ini,ada | banyak | di | ini | menu | pilihan,banyak | menu | pilihan
+78,1784310849078,KEEP,Tampilkan semua file yang sudah diunduh,diunduh | file | semua | sudah | tampilkan | yang,diunduh | semua | tampilkan
+79,1784310892665,KEEP,Sembunyikan kata sandi,kata | sandi | sembunyikan,kata | sandi | sembunyikan
+80,1784310918988,KEEP,"Tolong tutup pintunya, ya",pintunya | tolong | tutup | ya,tutup
+81,1784491005438,KEEP,"Iya, aku sudah kirim pesan",aku | iya | kirim | pesan | sudah,iya | kirim
+82,1784491174526,KEEP,Kerja kerasnya akhirnya membuahkan hasil,akhirnya | hasil | kerasnya | kerja | membuahkan,akhirnya | hasil | kerasnya | membuahkan
+83,1784491224063,KEEP,Dia mengkhianati temannya,dia | mengkhianati | temannya,mengkhianati | temannya
+84,1784491288950,KEEP,Usahanya membuahkan hasil,hasil | membuahkan | usahanya,usahanya
+85,1784491316627,KEEP,Jangan menghina orang lain,jangan | lain | menghina | orang,menghina
+86,1784491341589,KEEP,Pesawatnya sudah lepas landas,landas | lepas | pesawatnya | sudah,landas | lepas | pesawatnya
+87,1784491368112,KEEP,Kancing bajuku lepas,bajuku | kancing | lepas,bajuku | kancing
+88,1784491400651,KEEP,"Tunggu sebentar, ya?",sebentar | tunggu | ya,tunggu
+89,1784491480396,KEEP,Kencangkan sabuk pengaman,kencangkan | pengaman | sabuk,kencangkan | pengaman | sabuk
+90,1784491499633,KEEP,Kenakan sabuk pengaman,kenakan | pengaman | sabuk,kenakan
+91,1784491525882,KEEP,Anginnya kencang hari ini,anginnya | hari | ini | kencang,kencang
+92,1784491645985,KEEP,Aku kena hujan,aku | hujan | kena,kena
+93,1784491772154,KEEP,Dia memakai sabuk hitam,dia | hitam | memakai | sabuk,hitam | memakai
+94,1784491818273,KEEP,Sekarang sudah aman,aman | sekarang | sudah,aman
+95,1784491911474,KEEP,Aku nggak punya banyak waktu,aku | banyak | nggak | punya | waktu,waktu
+96,1784491942309,KEEP,Nomorku diblokir,diblokir | nomorku,nomorku
+97,1784492061286,KEEP,Aplikasi ini memakai pelacak lokasi,aplikasi | ini | lokasi | memakai | pelacak,lokasi | pelacak
+98,1784492073446,KEEP,Aku sering melihat iklan itu,aku | iklan | itu | melihat | sering,iklan | melihat
+99,1784492156481,KEEP,Aplikasi ini melacak lokasimu,aplikasi | ini | lokasimu | melacak,lokasimu | melacak
+100,1784492226766,KEEP,Kita bisa menghemat waktu,bisa | kita | menghemat | waktu,menghemat
+101,1784492245231,KEEP,"Dengan cara ini, waktu bisa dihemat",bisa | cara | dengan | dihemat | ini | waktu,cara | dihemat
+102,1784492272613,KEEP,Hubungkan ponselmu ke Wi-Fi,fi | hubungkan | ke | ponselmu | wi,fi | hubungkan | ponselmu | wi
+103,1784492301035,KEEP,Kita harus hemat air,air | harus | hemat | kita,air | harus | hemat
+104,1784492339545,KEEP,Aku belajar dari kesalahanku,aku | belajar | dari | kesalahanku,dari | kesalahanku
+105,1784492395513,KEEP,Ini sangat penting,ini | penting | sangat,penting | sangat
+106,1784492417440,KEEP,Ini penting bagi aku,aku | bagi | ini | penting,bagi
+107,1784492431867,KEEP,Bagikan foto ini ke temanmu,bagikan | foto | ini | ke | temanmu,foto | temanmu
+108,1784492456752,KEEP,Kucingku sekarang jadi gendut,gendut | jadi | kucingku | sekarang,gendut | jadi | kucingku
+109,1784492492933,KEEP,Aku pergi ke perpustakaan,aku | ke | pergi | perpustakaan,perpustakaan
+110,1784492568417,KEEP,Dia mempelajari pustaka tentang sejarah Indonesia,dia | indonesia | mempelajari | pustaka | sejarah | tentang,mempelajari | pustaka | sejarah | tentang
+111,1784492662556,KEEP,Aku mau pindah rumah,aku | mau | pindah | rumah,pindah
+112,1784492705137,KEEP,Aku sedang mengerjakan proyek baru,aku | baru | mengerjakan | proyek | sedang,mengerjakan | proyek | sedang
+113,1784492751845,KEEP,Pindahkan kursi itu ke sana,itu | ke | kursi | pindahkan | sana,pindahkan | sana
+114,1784492795944,KEEP,Sematkan pesan penting ini,ini | penting | pesan | sematkan,sematkan
+115,1784492928052,KEEP,Dia memakai bros di bajunya,bajunya | bros | di | dia | memakai,bajunya | bros
+116,1784493303869,KEEP,Indonesia adalah negara yang indah,adalah | indah | indonesia | negara | yang,adalah | indah | negara
+117,1784995910522,KEEP,Mobilnya berwarna merah,berwarna | merah | mobilnya,berwarna | merah | mobilnya
+118,1784995931333,KEEP,Langitnya biru hari ini,biru | hari | ini | langitnya,biru | langitnya
+119,1784995951017,KEEP,Daunnya masih hijau,daunnya | hijau | masih,daunnya | hijau
+120,1784996007730,KEEP,Dia memakai baju oranye,baju | dia | memakai | oranye,baju | oranye
+121,1784996040127,KEEP,Bunganya berwarna kuning,berwarna | bunganya | kuning,bunganya | kuning
+122,1784996065297,KEEP,Dia memakai jaket abu-abu,abu-abu | dia | jaket | memakai,abu-abu | jaket
+123,1784996074015,KEEP,Kertas ini putih,ini | kertas | putih,kertas | putih
+124,1784996123862,KEEP,Dia memakai gaun ungu,dia | gaun | memakai | ungu,gaun | ungu
+125,1784996141462,KEEP,Anjing itu berwarna cokelat,anjing | berwarna | cokelat | itu,anjing | cokelat
+126,1784996172536,KEEP,Dia membeli tas merah muda,dia | membeli | merah | muda | tas,membeli | muda | tas
+127,1784996258732,KEEP,Logo itu berwarna biru kehijauan,berwarna | biru | itu | kehijauan | logo,kehijauan | logo
+128,1784996485150,KEEP,Mobil itu berwarna hijau kebiruan,berwarna | hijau | itu | kebiruan | mobil,kebiruan
